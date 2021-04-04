@@ -104,3 +104,19 @@ put=[]
 for i in range(2):
    put.append(random.randrange(0,101,5))
 print(put)
+#Code Example
+import random
+import itertools
+outcomes={
+    "head":0,
+    "tails":0
+}
+sides=outcomes.keys()
+# print(outcomes.values())
+# print(outcomes.keys())
+sides=list(sides)
+for i in range(1000):
+    p=random.choice(sides)
+    outcomes[p]+=1
+print("Heads:",outcomes['head'])
+print("Tail:",outcomes['tails'])
