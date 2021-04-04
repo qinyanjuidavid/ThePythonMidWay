@@ -120,3 +120,24 @@ for i in range(1000):
     outcomes[p]+=1
 print("Heads:",outcomes['head'])
 print("Tail:",outcomes['tails'])
+#Learning material two
+import random
+# random.seed(5)
+print(random.random())
+print(random.random())
+print(random.random())
+#Randint
+print(random.randint(1,100))
+print(random.randint(-10,1))
+#RandRange
+print(random.randrange(1,10))
+print(random.randrange(1,10,2))
+print(random.randrange(0,101,10))
+#choice
+print(random.choice("computer"))
+print(random.choice([12,23,45,67,43]))
+print(random.choice([12,23,45,67,65,43]))
+#Shuffle
+n=[12,23,45,67,65,43]
+random.shuffle(n)
+print(n) #The shuffle method reorders the list
