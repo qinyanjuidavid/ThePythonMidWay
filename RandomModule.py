@@ -50,4 +50,8 @@ if __name__=="__main__":
 #Changed the study material
 import random
 print(random.randint(0,5))
+print(random.random())#It is giving us a float
+print(random.random()*100)#We can multiply it, so that we get the output in the range that we want
+print(random.random()*1000)#Now it ranges between 0,1000
+print(random.randint(0,100))#Same as the above line
 
