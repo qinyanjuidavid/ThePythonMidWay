@@ -147,8 +147,9 @@ while True:
     num=input("Guess a number between 1-50, If it matches with the computer, It's a bingo:")
     try:
         computers_guess=random.randrange(0,50)
-        print(computers_guess)
         num=int(num)
+        if type(num)==int and num>=0 and num<=50:
+            print("Not correct, the computer guessed {}.".format(computers_guess))
         if num>=0 and num<=50 and type(num)==int:
             if computers_guess==num:
                 print("Congratulations, you are a genius!!")
@@ -164,7 +165,7 @@ while True:
                 else:
                     print("Invalid Entry!")
         else:
-            print("Please enter a valid integer")
+            print("Please enter a valid integer between 1-50.")
     except:
         print("Please enter an integer")
 
