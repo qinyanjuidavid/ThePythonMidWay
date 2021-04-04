@@ -141,3 +141,31 @@ print(random.choice([12,23,45,67,65,43]))
 n=[12,23,45,67,65,43]
 random.shuffle(n)
 print(n) #The shuffle method reorders the list
+#Example of a code
+score=0
+while True:
+    num=input("Guess a number between 1-50, If it matches with the computer, It's a bingo:")
+    try:
+        computers_guess=random.randrange(0,50)
+        print(computers_guess)
+        num=int(num)
+        if num>=0 and num<=50 and type(num)==int:
+            if computers_guess==num:
+                print("Congratulations, you are a genius!!")
+                score+=1
+                print(score)
+                c=['Yes','No']
+                cont=input("Would you like to continue (Yes/No)?")
+                cont.lower()
+                if cont==c[0].lower() or cont[0]=="y":
+                    continue
+                elif cont==c[1].lower() or cont[0]=="n":
+                    break
+                else:
+                    print("Invalid Entry!")
+        else:
+            print("Please enter a valid integer")
+    except:
+        print("Please enter an integer")
+
+
