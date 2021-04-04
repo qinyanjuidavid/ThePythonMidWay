@@ -83,3 +83,17 @@ a.append("Jamie Saint Patric")
 a.append("Angie Valdes")
 print(a)
 print(random.choice(a))
+#Further examples
+myList=[2,109,False,10,"Lorem",482,"Ipsum"]
+print(random.choice(myList))
+#Shuffle
+import random
+from random import shuffle
+x=[[i]for i in range(10)]
+random.shuffle(x)
+print(x)
+l=[]
+for i in range(10):
+    l.append(i)
+shuffle(l)
+print(l)
