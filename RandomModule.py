@@ -97,3 +97,10 @@ for i in range(10):
     l.append(i)
 shuffle(l)
 print(l)
+#RandRange
+print(random.randint(1,100))#RandRange allows the use of a step unlike the randint
+print(random.randrange(0,100,5))#Start,Stop,Step
+put=[]
+for i in range(2):
+   put.append(random.randrange(0,101,5))
+print(put)
