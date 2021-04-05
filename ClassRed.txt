@@ -1,0 +1,10 @@
+
+    1. Students Name: Day Qinyanjui
+    =====================
+    English: 78
+    Kiswahili: 78
+    Mathematics: 78
+    Science: 78
+    Social Studies: 78
+    Total: 390
+    Avg Marks: 78.0

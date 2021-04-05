@@ -4,7 +4,6 @@
 --> Encapsulation
 --> Meta classes
 --> Decorators
---> Inbuilt __modules__
 --> Aggregation
 --> Abstact classes
 --> Inheritance
@@ -12,7 +11,7 @@
 --> context manager
 --> Recursion
 --> Static and class methods
---> lambda functions
+--> lambda functions --->Done
 --> collections
 --> Queue
 --> creating classes using type: t=type("ClassName",("InCaseOfInheritance"),{"methods":method})
