@@ -58,4 +58,12 @@ with open("test.txt",'r',encoding="utf-8") as f:
     for line in f:
         print(line,end=",")
 
-
+#Using the readline() function
+print()
+with open('text.txt','w',encoding="utf-8") as f:
+    f.write("My name is John Doe,\n")
+    f.write("I am 28 years old.\n")
+    f.write("I work in the human resource department.")
+with open("text.txt",'r',encoding="utf-8") as f:
+    # print(f.read())
+    print(f.readlines())
