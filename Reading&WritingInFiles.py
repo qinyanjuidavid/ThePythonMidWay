@@ -106,4 +106,14 @@ with open('dog_breeds.txt','r') as reader:
     print(reader.readline(40))
 with open('dog_breeds.txt','r',encoding='utf-8') as reader:
     print(reader.readlines()) #Reads all the lines
-    
+#Iterating over each line in the file
+with open('dog_breeds.txt','r',encoding='utf-8') as reader:
+    line=reader.readline()
+    while line!='':
+        print(line,end='')
+        line=reader.readline()
+#Alternative
+print("\n\n")
+with open("dog_breeds.txt",'r',encoding='utf-8') as reader:
+    for line in reader.readlines():
+        print(line,end='')
