@@ -83,6 +83,7 @@ def Trace2(f):
 print((Trace2(lambda name,age,department:"My name is {}, I am {} years old. I work in the {} department.".format(name,age,department)))("Angela Valdes",28,"Human Resource"))
 identity=Trace2(lambda name,age,department:"My name is {}, I am {} years old. I work in the {} department.".format(name,age,department))
 print(identity("John Doe",28,"Human Resource"))
-#Singel expression
+#Single expression
 print((lambda x:
       (x%2 and 'odd' or 'even'))(3))
+print((lambda x:x*3)(3))
