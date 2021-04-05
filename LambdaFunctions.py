@@ -62,4 +62,14 @@ def decorated_function(x):
     print(f"With argument '{x}'")
 decorated_function("Jane Doe")
 
+#Defining the second decorator
+def trace(f):
+    def wrap(*args,**kwargs):
+        print(f"[TRACE] func: {f.__name__},args: {args}, kwargs: {kwargs}")
+        return f(*args,**kwargs)
+    return wrap
 
+@trace
+def add_two(x):
+    return x+2
+print(add_two(5))
