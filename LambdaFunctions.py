@@ -73,3 +73,13 @@ def trace(f):
 def add_two(x):
     return x+2
 print(add_two(5))
+
+#Defining decorators in lambda function
+def Trace2(f):
+    def wrapper(*args,**kwargs):
+        print("***This is my decorator.***")
+        return f(*args,**kwargs)
+    return wrapper
+print((Trace2(lambda name,age,department:"My name is {}, I am {} years old. I work in the {} department.".format(name,age,department)))("Angela Valdes",28,"Human Resource"))
+identity=Trace2(lambda name,age,department:"My name is {}, I am {} years old. I work in the {} department.".format(name,age,department))
+print(identity("John Doe",28,"Human Resource"))
