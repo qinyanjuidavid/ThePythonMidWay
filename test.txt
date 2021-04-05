@@ -1,2 +1,3 @@
-Hello World, 
-My name is John Doe...
+This is my first line
+This line
+Contains only three lines.
