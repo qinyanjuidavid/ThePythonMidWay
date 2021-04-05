@@ -17,3 +17,6 @@ print(identity("Jane Doe"))
 identity=lambda name,age,department:"My name is {}, I am {} years old. I am in the {} department".format(name,age,department)
 i1=identity("Angie Valdosa",28,"Human Resource")
 print(i1)
+full_name=lambda first,last:"Full name: {} {}".format(first.title(),last.title())
+print(full_name("Guido","Van rossum"))
+#Anonymous Functions
