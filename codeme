@@ -17,4 +17,4 @@
 --> Queue
 --> creating classes using type: t=type("ClassName",("InCaseOfInheritance"),{"methods":method})
 --> Generators
---> Random()
+--> Random() --->Done
