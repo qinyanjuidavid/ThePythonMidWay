@@ -42,6 +42,12 @@ print(type(add))
 print(dis.dis(add))
 print(add)
 
-div_zero=lambda x:x/0
+div_zero=lambda x:x/1
 print(div_zero(2))
-#
+#Arguments
+print((lambda x,y,z:x+y+z) (1,2,3))
+print((lambda x,y,z=3:x+y+z)(1,2))
+print((lambda x,y,z=3:x+y+z)(1,y=2))
+print((lambda *args:sum(args))(1,2,3,4,5))
+print((lambda **kwargs:sum(kwargs.values()))(one=1,two=2,three=3))
+print((lambda x,*,y=0,z=0:x+y+z)(1,y=2,z=3))
