@@ -29,3 +29,19 @@ print(_(1,2))#Invoking the function
 high_ord_func=lambda x,func:x+func(x)
 print(high_ord_func(5,lambda x:x*x))
 print(high_ord_func(6,lambda x:x*x))
+#Python Lambda and Regular Functions
+import dis
+add=lambda x,y:x+y
+print(type(add))
+print(dis.dis(add))
+print(add)
+
+def add(x,y):
+    return x+y
+print(type(add))
+print(dis.dis(add))
+print(add)
+
+div_zero=lambda x:x/0
+print(div_zero(2))
+#
