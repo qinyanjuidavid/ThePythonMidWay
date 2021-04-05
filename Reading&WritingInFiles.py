@@ -67,3 +67,13 @@ with open('text.txt','w',encoding="utf-8") as f:
 with open("text.txt",'r',encoding="utf-8") as f:
     # print(f.read())
     print(f.readlines())
+#Resource 2
+#You need to catch errors and ensure that you close files after opening
+#Alternative1
+reader=open("dog_breeds.txt")
+try:
+    pass
+finally:
+    reader.close()
+#Alternative 2
+
