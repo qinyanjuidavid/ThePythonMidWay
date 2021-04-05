@@ -70,10 +70,31 @@ with open("text.txt",'r',encoding="utf-8") as f:
 #Resource 2
 #You need to catch errors and ensure that you close files after opening
 #Alternative1
-reader=open("dog_breeds.txt")
+reader=open("dog_breeds.txt",'w')
 try:
     pass
 finally:
     reader.close()
 #Alternative 2
+with open('dog_breeds.txt') as reader:
+    pass
+    #Further File processing
+#The with statement automatically takes care of the closing of the files
+#Buffered Binary Files Type
+file=open("abc.txt",'w')
+file.write("Hello")
+file.close()
 
+with open('dog_breeds.txt','w',encoding="utf-8") as reader:
+    reader.write("Pug\n")
+    reader.write("Jack Russell Terrier\n")
+    reader.write("English Springer Spaniel\n")
+    reader.write("German Shepherd\n")
+    reader.write("Staffordshire Bull Terrier\n")
+    reader.write("Cavalier King Charles Spaniel\n")
+    reader.write("Golden Retriever\n")
+    reader.write("West Highland White Terrier\n")
+    reader.write("Boxer\n")
+    reader.write("Border Terrier")
+with open('dog_breeds.txt','r') as reader:
+    print(reader.read())
