@@ -117,3 +117,9 @@ print("\n\n")
 with open("dog_breeds.txt",'r',encoding='utf-8') as reader:
     for line in reader.readlines():
         print(line,end='')
+#Appending to a file
+with open("dog_breeds.txt",'a',encoding='utf-8') as a_writer:
+    a_writer.write('\nBeagle')
+with open('dog_breeds.txt','r',encoding='utf-8') as reader:
+    for line in reader.readlines():
+        print(line,end="")
