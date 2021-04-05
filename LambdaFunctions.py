@@ -51,3 +51,15 @@ print((lambda x,y,z=3:x+y+z)(1,y=2))
 print((lambda *args:sum(args))(1,2,3,4,5))
 print((lambda **kwargs:sum(kwargs.values()))(one=1,two=2,three=3))
 print((lambda x,*,y=0,z=0:x+y+z)(1,y=2,z=3))
+#Decorators
+def some_decorator(f):
+    def wrapper(*args,**kwargs):
+        print(f"Calling function '{f.__name__}'")
+        return f(args)
+    return wrapper
+@some_decorator
+def decorated_function(x):
+    print(f"With argument '{x}'")
+decorated_function("Jane Doe")
+
+
