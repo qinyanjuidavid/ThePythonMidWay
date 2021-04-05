@@ -1,6 +1,7 @@
 --> Error Handling
 --> composition
---> files IO
+--> files IO ---> Done
+--> Directory
 --> Encapsulation
 --> Meta classes
 --> Decorators
@@ -17,3 +18,4 @@
 --> creating classes using type: t=type("ClassName",("InCaseOfInheritance"),{"methods":method})
 --> Generators
 --> Random() --->Done
+--> Closure/first class functions
