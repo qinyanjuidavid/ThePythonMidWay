@@ -45,4 +45,17 @@ with open('test.txt','w',encoding='utf-8') as f:
     f.write("This is my first line\n")
     f.write("This line\n")
     f.write("Contains only three lines.")
+#Reading files in Python
+f= open("test.txt","r",encoding="utf-8")
+# print(f.read())
+print(f.read(7))
+print(f.read())
+print(f.tell())
+print(f.seek(1))
+print(f.read())
+f.close()
+with open("test.txt",'r',encoding="utf-8") as f:
+    for line in f:
+        print(line,end=",")
+
 
