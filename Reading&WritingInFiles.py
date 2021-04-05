@@ -98,3 +98,12 @@ with open('dog_breeds.txt','w',encoding="utf-8") as reader:
     reader.write("Border Terrier")
 with open('dog_breeds.txt','r') as reader:
     print(reader.read())
+print()
+with open('dog_breeds.txt','r') as reader:
+    print(reader.readline(5))
+    #readline() reads the given character in the specific line
+    print(reader.readline(25))
+    print(reader.readline(40))
+with open('dog_breeds.txt','r',encoding='utf-8') as reader:
+    print(reader.readlines()) #Reads all the lines
+    
