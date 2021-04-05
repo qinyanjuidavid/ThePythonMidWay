@@ -123,3 +123,8 @@ with open("dog_breeds.txt",'a',encoding='utf-8') as a_writer:
 with open('dog_breeds.txt','r',encoding='utf-8') as reader:
     for line in reader.readlines():
         print(line,end="")
+print('\n\n')
+#Working with two files at the same time
+with open('dog_breeds.txt','r',encoding='utf-8') as reader, open('dog_breeds_reversed.txt','w',encoding='utf-8') as writer:
+    w=reader.readlines()
+    writer.writelines(reversed(w))
