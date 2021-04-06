@@ -50,3 +50,18 @@ def say_whee():
     print("Whee")
 say_whee=my_decorator(say_whee)
 say_whee()
+
+#Second decorator
+from datetime import datetime
+def not_during_the_night(func):
+    def wrapper(*args,**kwargs):
+        if datetime.now().hour<23:
+            func(*args,**kwargs)
+        else:
+            print("Hello")
+            # pass#The Neighbours are asleep
+    return wrapper
+def say_whee():
+    print("Whee!")
+say_whee=not_during_the_night(say_whee)
+say_whee()
