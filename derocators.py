@@ -16,3 +16,14 @@ def greet_bob(greeter_func):
     return greeter_func("Bob")
 print(greet_bob(say_hello))
 print(greet_bob(be_awesome))
+#Inner Functions
+#This are functions inside other functions
+def parent():
+    print("Printing from the parent() function")
+    def first_child():
+        print("Printing from the first_child() function")
+    def second_child():
+        print("Printing from the second_child() function")
+    first_child()
+    second_child()
+parent()
