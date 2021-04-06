@@ -39,3 +39,14 @@ def parent(num):
         return second_child()
 print(parent(1))
 print(parent(2))
+#Simple decorators
+def my_decorator(func):
+    def wrapper(*args,**kwargs):
+        print("Something is happening before the function is called.")
+        func(*args,**kwargs)
+        print("Something is happening after the function is called.")
+    return wrapper
+def say_whee():
+    print("Whee")
+say_whee=my_decorator(say_whee)
+say_whee()
