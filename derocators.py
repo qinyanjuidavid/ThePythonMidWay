@@ -91,3 +91,16 @@ def do_twice(func):
 def say_whee():
     print("Whee!")
 say_whee()
+#Decorating Functions with Arguments
+print()
+def do_twice(func):
+    def wrapper(*args,**kwargs):
+        func(*args,**kwargs)
+        func(*args,**kwargs)
+    return wrapper
+
+@do_twice
+def greet(name):
+    print("Hello {}".format(name))
+greet("Angie Valdosa")
+
