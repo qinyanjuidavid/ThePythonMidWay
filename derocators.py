@@ -136,6 +136,23 @@ def decorator(func):
         value=func(*args,**kwargs)
         return value
     return wrapper
-
+#Timing Functions
+from functools import wraps
+import time
+def timer(func):
+    @wraps(func)
+    def wrapper(*args,**kwargs):
+        start_time=time.perf_counter()
+        rv=func(*args,**kwargs)
+        end_time=time.perf_counter()
+        run_time=end_time-start_time
+        print("Function: {!r} finished in {} secs".format(func.__name__,run_time))
+        return rv
+    return wrapper
+@timer
+def waste_some_time(num_times):
+    for _ in range(num_times):
+        sum([i**2 for i in range(100)])
+waste_some_time(1)
 
 
