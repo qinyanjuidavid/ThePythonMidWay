@@ -103,4 +103,15 @@ def do_twice(func):
 def greet(name):
     print("Hello {}".format(name))
 greet("Angie Valdosa")
+#Using the return instead of the print
+def do_twice(func):
+    def wrapper(*args,**kwargs):
+        func(*args,**kwargs)
+        return func(*args,**kwargs)
+    return wrapper
+
+@do_twice
+def say_whee(name):
+    return "Hello, {}".format(name)
+print(say_whee("Jamie Saint Patrick"))
 
