@@ -1,12 +1,7 @@
 INFO:root:Ran with arguments: ('John Doe', 25), and kwargs: {}
 INFO:root:Ran with arguments: ('Jane Doe', 24), and kwargs: {}
 INFO:root:Ran with arguments: ('Angie', 28), and kwargs: {}
-INFO:root:Ran with arguments: ('John Doe', 25), and kwargs: {}
-INFO:root:Ran with arguments: ('Jane Doe', 24), and kwargs: {}
-INFO:root:Ran with arguments: ('Angie', 28), and kwargs: {}
-INFO:root:Ran with arguments: ('John Doe', 25), and kwargs: {}
-INFO:root:Ran with arguments: ('Jane Doe', 24), and kwargs: {}
-INFO:root:Ran with arguments: ('Angie', 28), and kwargs: {}
+INFO:root:Ran with arguments: ('Jamie', 30), and kwargs: {}
 INFO:root:Ran with arguments: ('John Doe', 25), and kwargs: {}
 INFO:root:Ran with arguments: ('Jane Doe', 24), and kwargs: {}
 INFO:root:Ran with arguments: ('Angie', 28), and kwargs: {}
