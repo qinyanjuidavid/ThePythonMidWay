@@ -114,4 +114,17 @@ def do_twice(func):
 def say_whee(name):
     return "Hello, {}".format(name)
 print(say_whee("Jamie Saint Patrick"))
+#Introspection
+from functools import wraps
+def do_twice(func):
+    @wraps(func)
+    def wrapper(*args,**kwargs):
+        func(*args,**kwargs)
+        func(*args,**kwargs)
+    return wrapper
+@do_twice
+def say_whee(name):
+    print("Hello, {}".format(name)) #Introspection -->The ability of a function to know its details
+say_whee("John Doe")
+print(say_whee.__name__)
 
