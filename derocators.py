@@ -127,4 +127,15 @@ def say_whee(name):
     print("Hello, {}".format(name)) #Introspection -->The ability of a function to know its details
 say_whee("John Doe")
 print(say_whee.__name__)
+#Real world examples
+from functools import wraps
+
+def decorator(func):
+    @wraps(func)
+    def wrapper(*args,**kwargs):
+        value=func(*args,**kwargs)
+        return value
+    return wrapper
+
+
 
