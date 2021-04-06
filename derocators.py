@@ -65,3 +65,17 @@ def say_whee():
     print("Whee!")
 say_whee=not_during_the_night(say_whee)
 say_whee()
+print()
+#Syntactic sugar
+#We ll make use of the pie syntax
+def my_decorator(func):
+    def wrapper(*args,**kwargs):
+        print("Something is happening before the function is called.")
+        func(*args,**kwargs)
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+def say_whee():
+    print("Whee!")
+say_whee()
