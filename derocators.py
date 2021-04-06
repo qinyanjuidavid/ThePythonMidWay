@@ -27,3 +27,15 @@ def parent():
     first_child()
     second_child()
 parent()
+#Returning Functions from Function
+def parent(num):
+    def first_child():
+        return "Hi, I am John Doe"
+    def second_child():
+        return "Call me Jane Doe"
+    if num==1:
+        return first_child()
+    else:
+        return second_child()
+print(parent(1))
+print(parent(2))
