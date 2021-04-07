@@ -45,3 +45,19 @@ try:
         print(read_data)
 except FileNotFoundError as fnf_error:
     print(fnf_error)
+print()
+# Try, Except and else clause
+def linux_interaction():
+    assert ("linux" in sys.platform)
+    print("Doing Something")
+try:
+    linux_interaction()
+except AssertionError as error:
+    print(error)
+else:
+    try:
+        with open('displays.log') as file:
+            read_data=file.read()
+            print(read_data)
+    except FileNotFoundError as fnf_error:
+        print(fnf_error)
