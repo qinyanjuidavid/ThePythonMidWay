@@ -202,3 +202,23 @@ def RealFunc(num1,num2):
     sub=num1-num2
     return sub
 print(RealFunc(56,5))
+#Passing arguments in decorators
+import functools
+import logging
+def callForLogs(n):
+    def CreateActualLogFiles(func):
+        logging.basicConfig(filename='{}.log'.format(func.__name__),level=logging.INFO)
+        @functools.wraps(func)
+        def wrapper(*args,**kwargs):
+            for _ in range(n):
+                logging.info(
+                    "{} Func Ran with, Args: {} and kwargs {}".format(n,args,kwargs)
+                )
+                rv=func(*args,**kwargs)
+            return rv
+        return wrapper
+    return CreateActualLogFiles
+@callForLogs(n=4)
+def greet(name):
+    print("Hello {}".format(name))
+greet("John Doe")
