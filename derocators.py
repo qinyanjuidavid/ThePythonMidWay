@@ -181,4 +181,24 @@ class TimeWaster(object):
             sum([i**2 for i in range(self.max_num)])
 tw=TimeWaster(5)
 tw.waste_time(56)
-
+#Nesting Decorators
+#Lets add and substract numbers using decorators
+from functools import wraps
+def CallOnce(func):
+    @wraps(func)
+    def wrapper(*args,**kwargs):
+        rv=func(*args,**kwargs)
+        return rv
+    return wrapper
+def CallTwice(func):
+    @wraps(func)
+    def wrapper(*args,**kwargs):
+        func(*args,**kwargs)
+        return func(*args,**kwargs)
+    return wrapper
+@CallOnce
+@CallTwice
+def RealFunc(num1,num2):
+    sub=num1-num2
+    return sub
+print(RealFunc(56,5))
