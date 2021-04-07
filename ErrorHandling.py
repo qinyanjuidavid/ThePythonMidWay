@@ -30,3 +30,18 @@ try:
     Divide(0,0)
 except ZeroDivisionError as error:
     print(error)
+
+
+try:
+    with open("displays.log") as file:
+        read_data=file.read()
+        print(read_data)
+except:
+    print("Coult not open displays.log")
+#The displays.log does not exist thus an exception is raised
+try:
+    with open('displays.log') as file:
+        read_data=file.read()
+        print(read_data)
+except FileNotFoundError as fnf_error:
+    print(fnf_error)
