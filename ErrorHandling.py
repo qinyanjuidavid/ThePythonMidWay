@@ -80,5 +80,7 @@ else:
         print(fnf_error)
 finally:
     print("Cleaning up, irrespective of any exception..")
-
+#Resource II
+#Errors cant be handled eg Syntax error
+#Exceptions can be handled during run time
 
