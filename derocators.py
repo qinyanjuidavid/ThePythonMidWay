@@ -222,3 +222,20 @@ def callForLogs(n):
 def greet(name):
     print("Hello {}".format(name))
 greet("John Doe")
+
+#Class Decorators
+from functools import wraps
+import functools
+class CountCalls(object):
+    def __init__(self,func):
+        functools.update_wrapper(self,func)
+        self.func=func
+        self.num_calls=0
+    def __call__(self, *args, **kwargs):
+        self.num_calls+=1
+        print("Call {} of {!r}".format(self.num_calls,self.func.__name__))
+        return self.func(*args,**kwargs)
+@CountCalls
+def say_whee():
+    print("Whee!")
+say_whee()
