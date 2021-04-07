@@ -154,5 +154,31 @@ def waste_some_time(num_times):
     for _ in range(num_times):
         sum([i**2 for i in range(100)])
 waste_some_time(1)
-
+waste_some_time(999)
+#Decorating Classes
+#Some of the most commonly used  class decorators are @property,@classmethod amd the @staticmethod
+#The @classmethod and @staticmethod are used to decorate the methods in a class
+#The @property decorators is uded to customize getters and setters
+from functools import wraps
+import time
+print()
+def timer(func):
+    @wraps(func)
+    def wrapper(*args,**kwargs):
+        start_time=time.time()
+        rv=func(*args,**kwargs)
+        end_time=time.time()
+        run_time=end_time-start_time
+        print("Function: {} finished in {} secs".format(func.__name__,run_time))
+        return rv
+    return wrapper
+@timer
+class TimeWaster(object):
+    def __init__(self,max_num):
+        self.max_num=max_num
+    def waste_time(self,num_times):
+        for _ in range(num_times):
+            sum([i**2 for i in range(self.max_num)])
+tw=TimeWaster(5)
+tw.waste_time(56)
 
