@@ -105,3 +105,11 @@ except ZeroDivisionError as error:
     print(error)
 else:
     print("Success, no error")
+#Overflow Error
+try:
+    import math
+    print(math.exp(1000))
+except OverflowError as error:
+    print(error)
+else:
+    print("Success, no error")
