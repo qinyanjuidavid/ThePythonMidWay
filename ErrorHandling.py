@@ -113,3 +113,13 @@ except OverflowError as error:
     print(error)
 else:
     print("Success, no error")
+#AssertionError
+try:
+    a=100
+    b="CoderPass"
+    assert a==b
+except AssertionError as error:
+    print(error)
+    print("Assertion error occured")
+else:
+    print("Success, no error!")
