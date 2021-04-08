@@ -83,4 +83,10 @@ finally:
 #Resource II
 #Errors cant be handled eg Syntax error
 #Exceptions can be handled during run time
+def recursion():
+    return recursion()
+try:
+    recursion()
+except RecursionError as error:
+    print(error)
 
