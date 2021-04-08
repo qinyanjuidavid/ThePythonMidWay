@@ -10,7 +10,7 @@ class PayrollSystem(object):
 class Employee:
     def __init__(self,id,name):
         self.id=id
-        self.name=names
+        self.name=name
 
 class SalaryEmployee(Employee):
     def __init__(self,id,name,weekly_salary):
@@ -33,3 +33,11 @@ class CommissionEmployee(SalaryEmployee):
     def calculate_payroll(self):
         fixed=super().calculate_payroll()
         return fixed+self.commission
+salary_employee=SalaryEmployee(1,"John",1500)
+hourly_employee=HourlyEmployee(2,"Jane Doe",40,15)
+commission_employee=CommissionEmployee(3,"John Doe",1000,250)
+payroll_system=PayrollSystem()
+payroll_system.calculate_payroll([
+    salary_employee,hourly_employee,commission_employee
+])
+print(payroll_system)
