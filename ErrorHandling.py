@@ -89,4 +89,11 @@ try:
     recursion()
 except RecursionError as error:
     print(error)
-
+#Keyboard Interrupt error
+try:
+    # inp=input("Enter Something:")
+    print("Press Ctrl+c or Interrupt the kernel:")
+except KeyboardInterrupt:
+    print("Caught KeyboardInterrupt")
+else:
+    print("No exception occured")
