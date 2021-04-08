@@ -123,3 +123,12 @@ except AssertionError as error:
     print("Assertion error occured")
 else:
     print("Success, no error!")
+#Attribute Error
+class Attributes(object):
+    a=2
+    print(a)
+try:
+    object=Attributes()
+    print(object.attribute)#"attribute" Does not exists
+except AttributeError as error:
+    print(error)
