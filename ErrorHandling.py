@@ -97,3 +97,11 @@ except KeyboardInterrupt:
     print("Caught KeyboardInterrupt")
 else:
     print("No exception occured")
+#ZeroDevision
+try:
+    a=100/0
+    print(a)
+except ZeroDivisionError as error:
+    print(error)
+else:
+    print("Success, no error")
